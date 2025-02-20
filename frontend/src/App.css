@@ -9,17 +9,32 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 1s linear;
   }
+}
+.Banner{
+  display: flex;
+  flex-direction: row;
+  flex: 12;
+  background-color: #161617;
+  align-content: center;
+  max-height: 11vh;
+  width: 100%;
+}
+.Banner>div{
+  max-height: 100%;
+}
+
+.image_logo{
+  width: 200px;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #24342a;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
