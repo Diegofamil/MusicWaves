@@ -23,14 +23,10 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    width: 30%;
-    max-height: 30vh;
+    width: 35%;
+    max-height: 60vh;
 }
-div.close{
-    width: 100%;
-    display: flex;
-    justify-content: right;
-}
+
 .close p{
     cursor: pointer;
     font-size: 15px;
@@ -38,3 +34,85 @@ div.close{
     margin: 1vh 2vh;
     width: 10px;
 }
+.modalTitle{
+    display: flex;
+    justify-content: right;
+    width: 100%;
+}
+.modalTitle p{
+    flex:10
+}
+.modalButtons{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    margin-right: 5vh;
+}
+.modalButtons button{
+    margin: 1vh 1vh;
+}
+.buttonAccept {
+  background-color: #d3d3d3;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #050505;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  max-width: none;
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.buttonAccept:hover,
+.buttonAccept:focus {
+  opacity: .75;
+}
+
+.buttonCancel {
+    background-color: #222;
+    border-radius: 4px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0;
+    max-width: none;
+    min-height: 44px;
+    min-width: 10px;
+    outline: none;
+    overflow: hidden;
+    padding: 9px 20px 8px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .buttonCancel:hover,
+  .buttonCancel:focus {
+    opacity: .90;
+  }
