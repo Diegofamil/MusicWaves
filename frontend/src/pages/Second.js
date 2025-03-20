@@ -5,7 +5,7 @@ export const Second = () => {
     const navigate = useNavigate()
   return (
     <div>
-    <h1>Página de Inicio</h1>
+    <h1>Autenticacion Completada</h1>
     <p>Bienvenido a nuestra aplicación.</p>
     <button onClick={() => navigate('/')}>Volver</button>
   </div>

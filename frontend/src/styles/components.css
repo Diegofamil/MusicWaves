@@ -116,3 +116,34 @@
   .buttonCancel:focus {
     opacity: .90;
   }
+
+  .basicInput{
+    background-color: #d3d3d3;
+    border-radius: 4px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #050505;
+    display: inline-block;
+    font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0;
+    max-width: none;
+    max-height: fit-content;
+    min-height: 44px;
+    min-width: 10px;
+    outline: none;
+    overflow: hidden;
+    padding: 9px 20px 8px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  .basicInput:hover,
+  .basicInput:focus {
+    opacity: .90;
+  }

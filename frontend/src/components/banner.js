@@ -15,17 +15,18 @@ const navigate = useNavigate();
     }
   return (
     <div className="Banner">
-        <div onClick={() => navigate('/second')} style={{cursor:'pointer',flex:'8',textAlign:"left"}}>
-            <img className="image_logo" src={logo} alt="logo"/>
+        <div  style={{cursor:'pointer',flex:'8',textAlign:"left"}}>
+            <img  onClick={() => navigate('/second')} className="image_logo" src={logo}  alt="logo"/>
         </div>
-        <div style={{cursor:'pointer',flex:'1'}} onClick={()=>OpenModal('modal_login')}>
-        <h6>Iniciar Sesion
-            </h6>
+        <div style={{cursor:'pointer',flex:'1',display:'flex',alignItems:'center'}} >
+            <button className="buttonLogin" onClick={()=>OpenModal('modal_login')}>
+                Iniciar Sesión 
+            </button>
         </div>
-        <div style={{cursor:'pointer',flex:'1'}} onClick={()=>OpenModal('modal_signup')}>
-        <h6>
+        <div style={{cursor:'pointer',flex:'1',display:'flex',alignItems:'center'}} >
+        <button className="buttonSignup" onClick={()=>OpenModal('modal_signup')}>
             Registrarse
-            </h6> 
+            </button> 
         </div>
     </div>
   )
