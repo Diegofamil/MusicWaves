@@ -28,25 +28,25 @@ return (
   <div className="modal" id="modal_signup">
       <div className="modalContainer">
         
-      <div className="modalTitle" style={{flex:'1'}}>
+      <div className="modalTitle" style={{flex:'2'}}>
         <p>Comienza la aventura</p> 
         <div className='close' style={{flex:'1'}}> 
             <p onClick={e=> closeModal(e)}>X</p>
         </div>
       </div>
-      <div  style={{flex:'1'}}>
-        <label htmlFor="email">
+      <div  style={{flex:'1',display:'flex',width:'100%',justifyContent:'space-around'}}>
+        <label htmlFor="email" style={{minWidth:'8vw'}}>
           Email
         </label>
-        <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)}></input>
+        <input className="basicInput" type="email" value={email} onChange={(e)=>setEmail(e.target.value)}></input>
       </div>
-      <div  style={{flex:'1'}}>
+      <div  style={{flex:'1',display:'flex',width:'100%',justifyContent:'space-around'}}>
     <label htmlFor="password">
       Contraseña
     </label>
-        <input type="password" value={pwd} onChange={(e)=>setPwd(e.target.value)}></input>
+        <input className="basicInput" type="password" value={pwd} onChange={(e)=>setPwd(e.target.value)}></input>
       </div>
-      <div className="modalButtons" style={{flex:'1'}}>
+      <div className="modalButtons" style={{flex:'2',display:'flex',width:'100%',justifyContent:'center',alignItems:'center'}}>
         <button className="buttonCancel" onClick={e=> closeModal(e)}>Cancelar</button>
         <button className="buttonAccept" onClick={handleUsers}>Resgistrarse</button>
       </div>
