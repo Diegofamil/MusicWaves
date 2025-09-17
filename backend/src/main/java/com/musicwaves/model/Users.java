@@ -10,14 +10,16 @@ public class Users {
     private Long id;
 
     private String email;
+    private String username;
     private String pwd;
 
     //Constructores
     public Users() {
     }
 
-    public Users(String email, String pwd) {
+    public Users(String email, String username, String pwd) {
         this.email = email;
+        this.username = username;
         this.pwd = pwd;
     }
 
@@ -39,6 +41,12 @@ public class Users {
     }   
     public void setPwd(String pwd) {
         this.pwd = pwd;
+    }
+    public String getUsername() {
+        return username;
+    }   
+    public void setUsername(String username) {
+        this.username = username;
     }
     
 }

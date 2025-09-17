@@ -1,9 +1,12 @@
 import React,{useState} from 'react'
 import $ from 'jquery'
+import { useNavigate} from 'react-router-dom';
 
 export const Login = () => {
-    const [email, setEmail] = useState('')
+    const [username, setUsername] = useState('')
     const [pwd, setPwd] = useState('')
+
+    const navigate = useNavigate();
 
     function closeModal(e) {
       console.log(e)
@@ -11,6 +14,21 @@ export const Login = () => {
       let parent = $(e.target).parents('.modal')
       $(parent).removeClass('show')
     }
+   const handleLogin = async () =>{
+    console.log(username, pwd)
+    const response =  await fetch('http://localhost:8080/users', {
+      method: 'GET',
+    })
+    const data = await response.json()
+    console.log(data)
+    const auth = data.find(user => user.username.toLowerCase() === username.toLowerCase() && user.pwd === pwd);
+    console.log(auth)
+    if(auth){
+      navigate('/second');
+    }else{
+      alert('Usuario o contraseña incorrectos')
+    }
+  }
 
   return (
     <div className="modal" id="modal_login">
@@ -24,10 +42,10 @@ export const Login = () => {
           </div>
 
         <div  style={{flex:'1',display:'flex',width:'100%',justifyContent:'space-around'}}>
-          <label htmlFor="email" style={{minWidth:'8vw'}}>
-            Email
+          <label htmlFor="username" style={{minWidth:'8vw'}}>
+            Usuario
             </label>
-          <input className="basicInput" type="email" value={email} onChange={(e)=>setEmail(e.target.value)}></input>
+          <input className="basicInput" type="username" value={username} onChange={(e)=>setUsername(e.target.value)}></input>
         </div>
         <div  style={{flex:'1',display:'flex',width:'100%',justifyContent:'space-around'}}>
           <label htmlFor="password">
@@ -36,7 +54,7 @@ export const Login = () => {
           <input className="basicInput" type="password" value={pwd} onChange={(e)=>setPwd(e.target.value)}></input>
         </div>
         <div  style={{flex:'2',display:'flex',width:'100%',justifyContent:'center',alignItems:'center'}}>
-          <button className="buttonAccept">Inciar Sesion</button>
+          <button className="buttonAccept" onClick={handleLogin}>Inciar Sesion</button>
         </div>
         </div>
 
