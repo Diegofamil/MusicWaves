@@ -2,6 +2,8 @@ import React,{useState} from 'react'
 import $ from 'jquery'
 import { useNavigate} from 'react-router-dom';
 
+import { getUsers } from '../api';
+
 export const Login = () => {
     const [username, setUsername] = useState('')
     const [pwd, setPwd] = useState('')
@@ -16,10 +18,8 @@ export const Login = () => {
     }
    const handleLogin = async () =>{
     console.log(username, pwd)
-    const response =  await fetch('http://localhost:8080/users', {
-      method: 'GET',
-    })
-    const data = await response.json()
+    
+    const data = await getUsers();
     console.log(data)
     const auth = data.find(user => user.username.toLowerCase() === username.toLowerCase() && user.pwd === pwd);
     console.log(auth)
