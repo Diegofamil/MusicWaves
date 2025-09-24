@@ -1,14 +1,15 @@
 import React,{useState} from 'react'
 import $ from 'jquery'
-import { useNavigate} from 'react-router-dom';
+// import { useNavigate} from 'react-router-dom';
 
+import { LoginSpt } from "../Spotify/controller";
 import { getUsers } from '../api';
 
 export const Login = () => {
     const [username, setUsername] = useState('')
     const [pwd, setPwd] = useState('')
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     function closeModal(e) {
       console.log(e)
@@ -24,7 +25,8 @@ export const Login = () => {
     const auth = data.find(user => user.username.toLowerCase() === username.toLowerCase() && user.pwd === pwd);
     console.log(auth)
     if(auth){
-      navigate('/second');
+      LoginSpt();
+      // navigate('/second');
     }else{
       alert('Usuario o contraseña incorrectos')
     }
